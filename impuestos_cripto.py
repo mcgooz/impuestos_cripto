@@ -43,10 +43,10 @@ def income_gains():
 
     print("\nValue by asset:")
     for asset, total_value in aggregated_data.items():
-        print(f"Asset: {asset}, Total value: €{total_value:.8f}")
+        print(f"Asset: {asset}, Total value: €{total_value:.8f}\n")
 
     overall_value = sum(aggregated_data.values())
-    print(f"\nTotal value: €{overall_value:.8f}")
+    print(f"Total value: €{overall_value:.8f}\n")
 
 def capital_gains():
     data = file_manager()
@@ -58,6 +58,15 @@ def capital_gains():
         sale = float(row["Proceeds (EUR)"])
         gains = float(row["Gains (EUR)"])
         type = row["Transaction type"]
+        # F - moneda de curso legal, N - otra moneda virtual, O - otro activo virtual, B - bienes o servicios
+        if type == "Trade":
+            type += " (N - otra moneda virtual)"
+        elif type == "Sell":
+            type += " (F - moneda de curso legal)"
+        elif type == "Fee":
+            type += " (O - otro activo virtual)"
+        elif type == "Send":
+            type += " (B - bienes o servicios)"
 
         if coin not in aggregated_data:
             aggregated_data[coin] = {}
