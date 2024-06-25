@@ -3,7 +3,7 @@ A tool to help calculate what to add in casilla 0027 (income gains) and the sect
 
 Currently only works with csv files provided by Binance.
 
-*** Still very much a work in progress ***
+*** Still very much a work in progress ***  
 Use at your own risk, I am not an accountant
 
 ## How to use
