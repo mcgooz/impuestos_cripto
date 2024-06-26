@@ -1,5 +1,5 @@
 # Crypto tax calculator
-A tool to help calculate what to add in casilla 0027 (income gains) and the section "Ganancias y pérdidas patrimoniales derivadas de la transmisión o permuta de monedas virtuales por particulares"
+A tool to help calculate crypto activites for the declaración de la renta.
 
 Currently only works with csv files provided by Binance.
 
