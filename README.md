@@ -10,13 +10,14 @@ The program gets the data from csv files provided by Binance and outputs the cal
 ```
 F - moneda de curso legal
 N - otra moneda virtual
-O - otro activo virtual
 B - bienes o servicios
 ```
 
 ## How to use
-Get your csv files for income gains and capital gains from Binance Tax. Copy these files to the program directory and run the calculator with  
+Get your csv files for income gains and capital gains from [Binance Tax](https://www.binance.com/en/tax). Copy these files to the program directory and run the calculator with  
 `python main.py`
+
+It's recommended that you maximise the terminal.
 
 ## Disclaimer
 **_This is still very much a work in progress_**.  

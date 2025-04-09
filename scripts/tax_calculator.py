@@ -51,10 +51,10 @@ class TaxCalculator:
                 type += " (N - otra moneda virtual)"
             elif type == "Sell":
                 type += " (F - moneda de curso legal)"
-            elif type == "Fee":
-                type += " (O - otro activo virtual)"
             elif type == "Send":
                 type += " (B - bienes o servicios)"
+            elif type == "Fee":
+                type += " (Gastos)"          
 
             if coin not in aggregated_data:
                 aggregated_data[coin] = {}
@@ -75,6 +75,6 @@ class TaxCalculator:
                 total_sale = data["Total Sale"]
                 total_gains = data["Gains"]
                 if total_gains < 0:
-                    print(f"Transaction Type: {type}\nTotal Cost: €{total_cost:.8f}\nTotal Sale: €{total_sale:.8f}\nGains: -€{abs(total_gains):.8f}\n")
+                    print(f"Transaction Type: {type}\nTotal Cost (Valor de adquisición): €{total_cost:.8f}\nTotal Sale (Valor de transmisión): €{total_sale:.8f}\nGains: -€{abs(total_gains):.8f}\n")
                 else:
-                    print(f"Transaction Type: {type}\nTotal Cost: €{total_cost:.8f}\nTotal Sale: €{total_sale:.8f}\nGains: €{total_gains:.8f}\n")
+                    print(f"Transaction Type: {type}\nTotal Cost (Valor de adquisición): €{total_cost:.8f}\nTotal Sale (Valor de transmisión): €{total_sale:.8f}\nGains: €{total_gains:.8f}\n")
