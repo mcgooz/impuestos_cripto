@@ -38,6 +38,7 @@ class TaxCalculator:
         overall_value = sum(aggregated_data.values())
         print(f"Total value: €{overall_value:.8f}\n")
 
+
     def capital_gains(self):
         aggregated_data = {}
 
@@ -63,10 +64,10 @@ class TaxCalculator:
             if type not in aggregated_data[coin]:
                 aggregated_data[coin][type] = {"Total Cost": 0.0, "Total Sale": 0.0, "Gains": 0.0}
 
-                # Aggregate cost, sale and gains values by coin and transaction type
-                aggregated_data[coin][type]["Total Cost"] += cost
-                aggregated_data[coin][type]["Total Sale"] += sale
-                aggregated_data[coin][type]["Gains"] += gains
+            # Aggregate cost, sale and gains values by coin and transaction type
+            aggregated_data[coin][type]["Total Cost"] += cost
+            aggregated_data[coin][type]["Total Sale"] += sale
+            aggregated_data[coin][type]["Gains"] += gains
 
         print("Data:")
         for coin, coin_data in aggregated_data.items():
@@ -113,6 +114,7 @@ def income_gains():
             print("Error: The file could not be found. Please enter a valid filename.")
         except csv.Error:
             print("Error: The file couldnot be read. Please ensure it is a valid CSV file.")
+
 
 def capital_gains():
     print("\nCapital Gains Calculation")
