@@ -7,4 +7,4 @@ Currently only works with csv files provided by Binance.
 Use at your own risk, I am not an accountant
 
 ## How to use
-Get your csv files for income gains and capital gains from Binance tax. Copy these files to the program directory and run the calculator.
+Get your csv files for income gains and capital gains from Binance tax. Copy these files to the program directory and run the calculator with `python main.py`

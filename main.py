@@ -2,7 +2,7 @@
 
 import csv
 
-from tax_calculator import TaxCalculator
+from scripts.tax_calculator import TaxCalculator
 
 
 def options():
@@ -18,11 +18,11 @@ def main():
     while True:
         options()
         start = input("Please choose an option: ")
-        if start == "1":
+        if start.strip() == "1":
             income_gains()
-        elif start == "2":
+        elif start.strip() == "2":
             capital_gains()
-        elif start == "3":
+        elif start.strip() == "3":
             break
 
 def income_gains():
@@ -56,12 +56,12 @@ def capital_gains():
         except (FileNotFoundError, TypeError, ValueError):
             print("Error: The file could not be found. Please enter a valid filename.")
             next = input("Press 1 to try again or 0 to go back: ")
-            if next == "0":
+            if next.strip() == "0":
                 break
         except (KeyError, csv.Error):
             print("Error: The file couldnot be read. Please ensure it is a valid CSV file.")
             next = input("Press 1 to try again or 0 to go back: ")
-            if next == "0":
+            if next.strip() == "0":
                 break
 
 
